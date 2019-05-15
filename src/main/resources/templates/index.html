@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
 	  xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+<th:block th:include="fragments/header"></th:block>
 <title>Insert title here</title>
 </head>
 <body>
-보내온 메시지는? <p th:text="${test}"></p>
-<p th:text="${egy}"></p>
+<th:block th:include="fragments/nav"></th:block>
 </body>
 </html>
