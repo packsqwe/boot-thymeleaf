@@ -23,7 +23,6 @@ public class HomeController {
 	}
 	@GetMapping("/register")
 	public String getRegForm() {
-		
 		return "form";
 	}
 	@GetMapping("/users")
