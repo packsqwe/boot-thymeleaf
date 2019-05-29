@@ -19,12 +19,18 @@ import idu.cs.exception.ResourceNotFoundException;
 import idu.cs.repository.UserRepository;
 
 @Controller
-public class HomeController {
+public class UserController {
    @Autowired UserRepository userRepo; // Dependency Injection
    
    @GetMapping("/")
    public String home(Model model) {
       return "index";
+   }
+   
+   @GetMapping("/login")
+   public String getLogin(Model model) {
+      model.addAttribute("users", userRepo.findAll());
+      return "login";
    }
    
    @GetMapping("/user-reg-form")
@@ -82,4 +88,6 @@ public class HomeController {
 		return "userlist";
 		//return ResponseEntity.ok().body(user);
 	}
+	
+	
 }
