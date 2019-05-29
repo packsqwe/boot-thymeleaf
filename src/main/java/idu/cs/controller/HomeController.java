@@ -71,7 +71,7 @@ public class HomeController {
       User user = userRepo.findById(userId).get();
       userRepo.delete(user);
       model.addAttribute("name", user.getName());
-      return "user-deleted";
+      return "user_delete";
    }
    
 	@GetMapping("/users/fn")
